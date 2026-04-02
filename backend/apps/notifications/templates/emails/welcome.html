@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: linear-gradient(135deg, #dc2626, #991b1b); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
+        <h1 style="color: white; margin: 0;">Welcome to Donate Your Blood</h1>
+    </div>
+    <div style="padding: 30px; background: #f9fafb; border-radius: 0 0 10px 10px;">
+        <p>Hi {{ user.first_name }},</p>
+        <p>Thank you for registering with <strong>Donate Your Blood</strong>. Your account has been created successfully.</p>
+        {% if user.is_donor %}
+        <p>As a registered donor, you can now:</p>
+        <ul>
+            <li>Set your availability status</li>
+            <li>Get matched with blood requests in your area</li>
+            <li>Help save lives</li>
+        </ul>
+        {% else %}
+        <p>You can now create blood requests, organize campaigns, and connect with donors.</p>
+        {% endif %}
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="#" style="background: #dc2626; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px;">Go to Dashboard</a>
+        </p>
+        <p style="color: #666; font-size: 12px; margin-top: 30px;">Every drop counts. Thank you for being part of this life-saving community.</p>
+    </div>
+</body>
+</html>

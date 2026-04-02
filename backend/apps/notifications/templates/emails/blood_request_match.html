@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background: linear-gradient(135deg, #dc2626, #991b1b); padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
+        <h1 style="color: white; margin: 0;">Blood Donation Request</h1>
+    </div>
+    <div style="padding: 30px; background: #f9fafb; border-radius: 0 0 10px 10px;">
+        <p>Hi {{ donor.first_name }},</p>
+        <p>Someone needs your help! A blood donation request matching your blood type has been posted.</p>
+        <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #dc2626; margin: 20px 0;">
+            <p><strong>Title:</strong> {{ blood_request.title }}</p>
+            <p><strong>Blood Type Needed:</strong> {{ blood_request.blood_type_needed }}</p>
+            <p><strong>Units Needed:</strong> {{ blood_request.units_needed }}</p>
+            <p><strong>Urgency:</strong> {{ blood_request.urgency }}</p>
+            <p><strong>Hospital:</strong> {{ blood_request.hospital_name }}</p>
+            <p><strong>Location:</strong> {{ blood_request.location }}</p>
+            <p><strong>Needed By:</strong> {{ blood_request.needed_date }}</p>
+        </div>
+        <p>Please log in to your dashboard to accept or decline this request.</p>
+        <p style="color: #666; font-size: 12px; margin-top: 30px;">You received this email because you are a registered donor on Donate Your Blood.</p>
+    </div>
+</body>
+</html>
